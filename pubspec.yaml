@@ -17,7 +17,6 @@ dependencies:
 
   cupertino_icons: ^1.0.8
   qr_flutter: # For QR code generation
-  hive_flutter: # To initialize Hive
   get: # For state management
   url_launcher: # To open scanned urls
   mobile_scanner: ^6.0.6

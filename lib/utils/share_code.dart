@@ -1,4 +1,3 @@
-// Function to capture and share
 import 'dart:ui' as ui;
 
 import 'package:flutter/rendering.dart';
