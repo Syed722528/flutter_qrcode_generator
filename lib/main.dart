@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 
 import 'controllers/scanner_controller.dart';
 
-Future<void> main() async {
+void main() {
   Get.put(QRScannerController());
   runApp(const MyApp());
 }

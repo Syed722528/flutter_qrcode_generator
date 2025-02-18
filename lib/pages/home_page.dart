@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_qrcode_generator/pages/generator.dart';
 import 'package:flutter_qrcode_generator/pages/scanner.dart';
 import 'package:get/get.dart';
+import 'package:lottie/lottie.dart';
 
 import '../widgets/custom_container_decoration.dart';
 import '../widgets/custom_elevated_button.dart';
@@ -34,7 +35,7 @@ class HomePage extends StatelessWidget {
                 child: Column(
                   spacing: 3,
                   children: [
-                    Expanded(child: Image.asset('assets/generator.jpg')),
+                    Expanded(child: Lottie.asset('assets/scanner.json')),
                     ElevatedButton(
                       style: customElevatedButtonStyle(),
                       onPressed: () {

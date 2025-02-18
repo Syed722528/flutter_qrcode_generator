@@ -3,6 +3,7 @@ import 'package:flutter_qrcode_generator/utils/share_code.dart';
 import 'package:flutter_qrcode_generator/widgets/custom_container_decoration.dart';
 import 'package:flutter_qrcode_generator/widgets/custom_elevated_button.dart';
 import 'package:get/get.dart';
+import 'package:lottie/lottie.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 
 import '../controllers/generator_controller.dart';
@@ -37,19 +38,30 @@ class Generator extends StatelessWidget {
                 spacing: 25,
 
                 children: [
+                  Lottie.asset(
+                    'assets/generator.json',
+                    alignment: Alignment.center,
+                    animate: true,
+                    width: 200,
+                    
+                  ),
                   Obx(
                     () => Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      spacing: 7,
                       children: [
-                        _customButton(
-                          'From url',
-                          controller.isUrl.value,
-                          () => controller.updateIsUrl(),
+                        Expanded(
+                          child: _customButton(
+                            'From url',
+                            controller.isUrl.value,
+                            () => controller.updateIsUrl(),
+                          ),
                         ),
-                        _customButton(
-                          'From scan',
-                          !controller.isUrl.value,
-                          () => controller.updateIsUrl(),
+                        Expanded(
+                          child: _customButton(
+                            'From scan',
+                            !controller.isUrl.value,
+                            () => controller.updateIsUrl(),
+                          ),
                         ),
                       ],
                     ),

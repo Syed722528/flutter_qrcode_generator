@@ -21,6 +21,7 @@ dependencies:
   url_launcher: # To open scanned urls
   mobile_scanner: ^6.0.6
   share_plus: 
+  lottie: 
 dev_dependencies:
   flutter_test:
     sdk: flutter
